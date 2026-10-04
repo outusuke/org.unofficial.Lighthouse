@@ -1,0 +1,40 @@
+app-id: org.unofficial.Lighthouse
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: lighthouse
+
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=all
+
+modules:
+  - name: lighthouse
+    buildsystem: simple
+    build-commands:
+      - chmod +x lighthouse.appimage
+      - ./lighthouse.appimage --appimage-extract
+      - mkdir -p /app/Lighthouse
+      - cp -a squashfs-root/usr/bin squashfs-root/usr/lib /app/Lighthouse/
+      - rm -rf /app/Lighthouse/bin/include /app/Lighthouse/bin/lib
+      - install -Dm644 gamecontrollerdb.txt /app/share/lighthouse/gamecontrollerdb.txt
+      - install -Dm755 lighthouse-launcher.sh /app/bin/lighthouse
+      - install -Dm644 squashfs-root/usr/share/icons/hicolor/256x256/apps/logo.png /app/share/icons/hicolor/256x256/apps/org.unofficial.Lighthouse.png
+      - install -Dm644 org.unofficial.Lighthouse.desktop /app/share/applications/org.unofficial.Lighthouse.desktop
+      - install -Dm644 org.unofficial.Lighthouse.metainfo.xml /app/share/metainfo/org.unofficial.Lighthouse.metainfo.xml
+    sources:
+      - type: archive
+        url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.1.0/Lighthouse-Hatteras-Alfa-Linux.zip
+        sha256: 0ed81123ab142e711854c95921c1e37b2e75dd4a3966fa0382f65da7c775986d
+        strip-components: 0
+      - type: file
+        path: lighthouse-launcher.sh
+      - type: file
+        path: org.unofficial.Lighthouse.desktop
+      - type: file
+        path: org.unofficial.Lighthouse.metainfo.xml

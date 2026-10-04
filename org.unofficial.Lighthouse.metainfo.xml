@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.unofficial.Lighthouse</id>
+  <name>Lighthouse</name>
+  <summary>Banjo-Kazooie PC port (requires your own ROM)</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>Unofficial Flatpak of Lighthouse, a PC port of Banjo-Kazooie with randomizer and Anchor co-op. It contains no copyrighted assets; you must supply your own ROM.</p>
+  </description>
+  <url type="homepage">https://github.com/HarbourMasters/Lighthouse</url>
+  <launchable type="desktop-id">org.unofficial.Lighthouse.desktop</launchable>
+  <releases>
+    <release version="1.1.0" date="2026-08-16"/>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>
