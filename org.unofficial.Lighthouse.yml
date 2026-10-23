@@ -22,7 +22,7 @@ modules:
       - mkdir -p /app/Lighthouse
       - cp -a squashfs-root/usr/bin squashfs-root/usr/lib /app/Lighthouse/
       - rm -rf /app/Lighthouse/bin/include /app/Lighthouse/bin/lib
-      - install -Dm644 gamecontrollerdb.txt /app/share/lighthouse/gamecontrollerdb.txt
+            - install -Dm644 squashfs-root/usr/bin/gamecontrollerdb.txt /app/share/lighthouse/gamecontrollerdb.txt
       - install -Dm755 lighthouse-launcher.sh /app/bin/lighthouse
       - install -Dm644 squashfs-root/usr/share/icons/hicolor/256x256/apps/logo.png /app/share/icons/hicolor/256x256/apps/org.unofficial.Lighthouse.png
       - install -Dm644 org.unofficial.Lighthouse.desktop /app/share/applications/org.unofficial.Lighthouse.desktop
