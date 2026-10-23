@@ -22,7 +22,7 @@ modules:
       - mkdir -p /app/Lighthouse
       - cp -a squashfs-root/usr/bin squashfs-root/usr/lib /app/Lighthouse/
       - rm -rf /app/Lighthouse/bin/include /app/Lighthouse/bin/lib
-            - install -Dm644 squashfs-root/usr/bin/gamecontrollerdb.txt /app/share/lighthouse/gamecontrollerdb.txt
+      - install -Dm644 squashfs-root/usr/bin/gamecontrollerdb.txt /app/share/lighthouse/gamecontrollerdb.txt
       - install -Dm755 lighthouse-launcher.sh /app/bin/lighthouse
       - install -Dm644 squashfs-root/usr/share/icons/hicolor/256x256/apps/logo.png /app/share/icons/hicolor/256x256/apps/org.unofficial.Lighthouse.png
       - install -Dm644 org.unofficial.Lighthouse.desktop /app/share/applications/org.unofficial.Lighthouse.desktop
@@ -32,6 +32,7 @@ modules:
         url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.2.0/lighthouse.appimage
         sha256: 6998f1e0c645df64fcff9857fcaffdfdf96435d0d7550d5fbd8500974db190b4
         dest-filename: lighthouse.appimage
+        only-arches: [x86_64]
       - type: file
         path: lighthouse-launcher.sh
       - type: file
