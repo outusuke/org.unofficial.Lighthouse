@@ -28,10 +28,10 @@ modules:
       - install -Dm644 org.unofficial.Lighthouse.desktop /app/share/applications/org.unofficial.Lighthouse.desktop
       - install -Dm644 org.unofficial.Lighthouse.metainfo.xml /app/share/metainfo/org.unofficial.Lighthouse.metainfo.xml
     sources:
-      - type: archive
-        url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.1.0/Lighthouse-Hatteras-Alfa-Linux.zip
-        sha256: 0ed81123ab142e711854c95921c1e37b2e75dd4a3966fa0382f65da7c775986d
-        strip-components: 0
+      - type: file
+        url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.2.0/lighthouse.appimage
+        sha256: REPLACE_WITH_NEW_SHA256
+        dest-filename: lighthouse.appimage
       - type: file
         path: lighthouse-launcher.sh
       - type: file
