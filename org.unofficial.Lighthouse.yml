@@ -30,7 +30,7 @@ modules:
     sources:
       - type: file
         url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.2.0/lighthouse.appimage
-        sha256: REPLACE_WITH_NEW_SHA256
+        sha256: 6998f1e0c645df64fcff9857fcaffdfdf96435d0d7550d5fbd8500974db190b4
         dest-filename: lighthouse.appimage
       - type: file
         path: lighthouse-launcher.sh
