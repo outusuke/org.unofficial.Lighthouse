@@ -29,8 +29,8 @@ modules:
       - install -Dm644 org.unofficial.Lighthouse.metainfo.xml /app/share/metainfo/org.unofficial.Lighthouse.metainfo.xml
     sources:
       - type: file
-        url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.2.1/lighthouse.appimage
-        sha256: 9f7b65f49aad9eec7805f12544dbd070f7a1faf87989cb5b8dbb04329387814a
+        url: https://github.com/HarbourMasters/Lighthouse/releases/download/1.2.2/lighthouse.appimage
+        sha256: f5edff0f690e476eedff7c05ad9fefeb4de173466af6de61c2729d9276aa73b6
         dest-filename: lighthouse.appimage
         only-arches: [x86_64]
       - type: file
